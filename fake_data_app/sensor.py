@@ -84,6 +84,7 @@ if __name__ == "__main__":
     capteur = VisitSensor(1500, 150)
     capteur2= VisitSensor(2000, 200)
     print(capteur.get_visit_count(queried_date))
-    print(capteur2.get_visit_count(queried_date))
+    print( capteur2.get_visit_count( queried_date ) )
+
 
 
