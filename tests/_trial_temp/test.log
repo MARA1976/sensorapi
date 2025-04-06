@@ -1,2 +1,2 @@
-2025-04-06 14:39:32+0200 [-] Log opened.
-2025-04-06 14:39:32+0200 [-] /usr/lib/python3.12/unittest/case.py:580: builtins.RuntimeWarning: TestResult has no addDuration method
+2025-04-06 14:41:41+0200 [-] Log opened.
+2025-04-06 14:41:41+0200 [-] /usr/lib/python3.12/unittest/case.py:580: builtins.RuntimeWarning: TestResult has no addDuration method
