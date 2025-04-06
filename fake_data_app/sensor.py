@@ -11,7 +11,7 @@ class VisitSensor:
     and returns the number of visitors that passed through
     a particular door on a given date
     """
-
+    HOLIDAYS = [date( 2023, 12, 25 )]
     def __init__(
         self,
         avg_visit: int,
@@ -28,8 +28,11 @@ class VisitSensor:
     def simulate_visit_count(self, business_date: date) -> int:
         """Simulate the number of person detected by the sensor
         during the day"""
+        #verify holidays
+        if business_date in self.HOLIDAYS:
+            return -1
 
-        # Ensure reproducibility of measurements
+         # Ensure reproducibility of measurements
         np.random.seed(seed=business_date.toordinal())
 
         # Find out which day the business_date corresponds to: Monday = 0, Sunday = 6
@@ -79,4 +82,8 @@ if __name__ == "__main__":
     queried_date = date(year, month, day)
 
     capteur = VisitSensor(1500, 150)
+    capteur2= VisitSensor(2000, 200)
     print(capteur.get_visit_count(queried_date))
+    print(capteur2.get_visit_count(queried_date))
+
+

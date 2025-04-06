@@ -27,6 +27,10 @@ class TestVisitSensor(unittest.TestCase):
         visit_count = visit_sensor.get_visit_count(date(2023, 11, 28))
         self.assertEqual(visit_count, 238)
 
+    def test_holiday_closed(self):
+        visit_sensor = VisitSensor( 1200, 300 )
+        visit_count = visit_sensor.simulate_visit_count( date( 2023, 12, 25 ) )  # Noël
+        self.assertEqual( visit_count, -1 )
 
 if __name__ == "__main__":
     unittest.main()
